@@ -1,5 +1,6 @@
 :root {
     --white-standard: #FFFFFF;
+    --background-color: #9b980b;
 }
 
 body {
@@ -7,14 +8,14 @@ body {
     font-family: 'arial', sans-serif;
 }
 .website__header {
-    background-color: red;
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--white-standard);
 }
 
-.container__logo--descricao {
+.container__logo--description {
     margin: 0;
     padding: 0;
     display: flex;
@@ -24,7 +25,7 @@ body {
 }
 
 .website__logo {
-    width: 150px;
+    width: 60px;
 }
 
 .menu_nav {
@@ -35,4 +36,50 @@ body {
     color: var(--white-standard);
     margin-right: 10px;
     text-decoration: none;
+}
+
+.app__field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.input__container {
+    width: 500px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid var(--background-color);
+}
+
+.button__search {
+    width: 250px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--white-standard);
+}
+
+.website__footer {
+    bottom: 0;
+    display: block;
+    text-align: center;
+}
+
+.website__container--footer {
+    margin: 0;
+    padding: 0;
+}
+
+.text__footer {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.logo__footer {
+    width: 30px;
 }
