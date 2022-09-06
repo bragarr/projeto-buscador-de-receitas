@@ -36,19 +36,55 @@ recipeFormn.addEventListener("submit", (event) => {
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
                     const recipeDetail = document.createElement("section");
-                    const container = document.createElement("div");
                     recipeDetail.classList.add("recipe__detail");
+                    const container = document.createElement("div");
                     const recipeIngridients = `
+                    <aside class="destail__recipe">
+                    <h2>How to do it?</h2>
                     <p>
                         ${meals[button.value].strInstructions}
                     </p>
+                    </aside>
+                    <figure class="recipe__summary">
+                        <h2 class="recipe__tittle">${meals[button.value].strMeal}</h2>
+                        <img src="${meals[button.value].strMealThumb}" alt="Recipe Country" class="recipe__image">
+                        <h3>Ingredients List</h3>
+                        <ul class="recipe__ingridients">
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient1} ${meals[button.value].strMeasure1}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient2} ${meals[button.value].strMeasure2}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient3} ${meals[button.value].strMeasure3}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient4} ${meals[button.value].strMeasure4}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient5} ${meals[button.value].strMeasure5}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient6} ${meals[button.value].strMeasure6}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient7} ${meals[button.value].strMeasure7}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient8} ${meals[button.value].strMeasure8}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient9} ${meals[button.value].strMeasure9}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient10} ${meals[button.value].strMeasure10}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient11} ${meals[button.value].strMeasure11}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient12} ${meals[button.value].strMeasure12}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient13} ${meals[button.value].strMeasure13}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient14} ${meals[button.value].strMeasure14}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient15} ${meals[button.value].strMeasure15}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient16} ${meals[button.value].strMeasure16}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient17} ${meals[button.value].strMeasure17}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient18} ${meals[button.value].strMeasure18}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient19} ${meals[button.value].strMeasure19}</li>
+                            <li class="recipe_ingridient">${meals[button.value].strIngredient20} ${meals[button.value].strMeasure20}</li>
+                        </ul>
+                    </figure>
                     `;
-                    container.innerHTML = recipeIngridients;
-                    recipeDetail.appendChild(container);
+                    recipeDetail.innerHTML = recipeIngridients;
                     mainContent.appendChild(recipeDetail);
                     const itemList = document.querySelectorAll(".result__meal");
                     itemList.forEach(item => {
                         recipesList.removeChild(item);
+                    })
+                    const listIngridientsPrinted = document.querySelectorAll(".recipe_ingridient");
+                    const masterList = document.querySelector(".recipe__ingridients");
+                    listIngridientsPrinted.forEach(item => {
+                        if(item.innerHTML === " ") {
+                            masterList.removeChild(item);
+                        }
                     })
                 })
             })
