@@ -21,6 +21,7 @@ recipeFormn.addEventListener("submit", (event) => {
                     <img src="${meals[i].strMealThumb}" alt="Meal Thumnail" class="recipes__image">
                     <h3 class="name__recipes">${meals[i].strMeal}</h3>
                 </figure>
+                <p>${meals[i].strArea}</p>
                 <aside class="buttons_interface">
                     <button class="button__check">Check Recipe</button>
                 </aside>
