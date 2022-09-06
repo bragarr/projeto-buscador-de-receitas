@@ -23,7 +23,6 @@ recipeFormn.addEventListener("submit", (event) => {
                 </figure>
                 <aside class="buttons_interface">
                     <button class="button__check">Check Recipe</button>
-                    <button class="button__favorites">Add Favorite</button>
                 </aside>
                 `;
                 li.innerHTML = containerResultSearch;

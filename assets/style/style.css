@@ -1,6 +1,7 @@
 :root {
     --white-standard: #FFFFFF;
-    --background-color: #9b980b;
+    --background-color: #039292;
+    --button-check: #030f53;
 }
 
 body {
@@ -67,7 +68,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .result__meal {
@@ -76,8 +77,6 @@ body {
     margin: 10px;
     border-radius: 10px;
     color: var(--white-standard);
-    display: flex;
-    flex-direction: row;
 }
 
 .container__meal {
@@ -90,7 +89,10 @@ body {
 }
 
 .recipes__image {
-    width: 120px;
+    width: 240px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 187, 0);
 }
 
 .buttons_interface {
@@ -101,25 +103,14 @@ body {
 }
 
 .button__check {
-    background-color: var(--white-standard);
-    color: var(--background-color);
+    background-color: var(--button-check);
+    color: var(--white-standard);
     cursor: pointer;
     border: none;
     border-radius: 5px;
     margin: 10px;
     width: 120px;
-    padding: 20px 0;
-}
-
-.button__favorites {
-    background-color: var(--white-standard);
-    color: var(--background-color);
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin: 10px;
-    width: 120px;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .website__footer {
