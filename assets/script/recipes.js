@@ -38,7 +38,7 @@ recipeFormn.addEventListener("submit", (event) => {
             userInput.value = "";
             const buttons = document.querySelectorAll(".button__check");
             buttons.forEach(button => {
-                button.addEventListener("click", () => {,
+                button.addEventListener("click", () => {
                     const recipeDetail = document.createElement("section");
                     recipeDetail.classList.add("recipe__detail"); 
                     const recipeIngridients = `

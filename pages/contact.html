@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/style/style.css">
+        <title>Contact - Cook Notes</title>
+    </head>
+    <body>
+        <header class="website__header">
+            <figure class="container__logo--description">
+                <img src="../assets/img/website_logo.png" alt="website logo" class="website__logo">
+                <h1 class="website__tittle">Cook Note</h1>
+            </figure>
+            <nav class="menu_nav">
+                <a href="../index.html" class="links__nav">Home</a>
+                <a href="./contact.html" class="links__nav">Contact Us</a>
+            </nav>
+        </header>
+        <main>
+            <section class="project__presantation contact__form">
+                <h2 class="tittle__presantation--secondary">Contact us for any more questions or sugestions!</h2>
+                <form>
+                    <label for="full__name">Full Name</label>
+                    <input type="text" id="full__name" class="inputStandard" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="inputStandard" required placeholder="email@yuoremail.com">
+
+                    <label for="phone__number">Phone Number</label> 
+                    <input type="tel" id="phone_number" class="inputStandard" required placeholder="(XX) XXX-XXX-XXX">
+
+                    <label for="message">Your Mensage to us</label>
+                    <textarea cols="70" rows="10" id="message" class="inputStandard" required></textarea>
+
+                    <label class="checkbox"><input type="checkbox" checked>Would you like to receive any new information by e-mail?</label>
+                    <input type="submit" value="Send" class="send">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
