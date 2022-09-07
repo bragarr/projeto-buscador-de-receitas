@@ -14,6 +14,10 @@ recipeFormn.addEventListener("submit", (event) => {
         .then(data => {
             const {meals} = data;
             console.log(data);
+            const itemList = document.querySelectorAll(".result__meal");
+            itemList.forEach(item => {
+                recipesList.removeChild(item);
+            })
             for(let i = 0; i < meals.length; i++) {
                 const li = document.createElement("li");
                 li.classList.add("result__meal");
@@ -31,13 +35,12 @@ recipeFormn.addEventListener("submit", (event) => {
                 li.innerHTML = containerResultSearch;
                 recipesList.appendChild(li);
             }
-
+            userInput.value = "";
             const buttons = document.querySelectorAll(".button__check");
             buttons.forEach(button => {
-                button.addEventListener("click", () => {
+                button.addEventListener("click", () => {,
                     const recipeDetail = document.createElement("section");
-                    recipeDetail.classList.add("recipe__detail");
-                    const container = document.createElement("div");
+                    recipeDetail.classList.add("recipe__detail"); 
                     const recipeIngridients = `
                     <aside class="destail__recipe">
                     <h2>How to do it?</h2>
@@ -78,13 +81,6 @@ recipeFormn.addEventListener("submit", (event) => {
                     const itemList = document.querySelectorAll(".result__meal");
                     itemList.forEach(item => {
                         recipesList.removeChild(item);
-                    })
-                    const listIngridientsPrinted = document.querySelectorAll(".recipe_ingridient");
-                    const masterList = document.querySelector(".recipe__ingridients");
-                    listIngridientsPrinted.forEach(item => {
-                        if(item.innerHTML === " ") {
-                            masterList.removeChild(item);
-                        }
                     })
                 })
             })
