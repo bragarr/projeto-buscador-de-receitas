@@ -16,7 +16,7 @@ recipeFormn.addEventListener("submit", (event) => {
             if(meals === null) {
                 document.getElementById("error__message").textContent = "Sorry, We do not have this on our database. Please, Try another!" 
             } else if( document.getElementById("input__search").value === "" ) {
-                document.getElementById("error__message").textContent = "Sorry, You need to type something first! Like: 'chichen' or 'Beef', evetually we will get there haha !" 
+                document.getElementById("error__message").textContent = "Sorry, You need to type something first! Like: 'chicken' or 'Beef', evetually we will get there haha !" 
             } else {
                 document.getElementById("error__message").textContent = ""
                 const itemList = document.querySelectorAll(".result__meal");
