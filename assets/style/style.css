@@ -296,6 +296,10 @@ form label, .textoContato {
         width: 280px;
         padding: 20px 0;
     }
+
+    .recipe__detail {
+        margin: 0 50px;
+    }
     
     .recipe__summary {
         margin: 0 260px;
@@ -361,6 +365,10 @@ form label, .textoContato {
         width: 280px;
         padding: 20px 0;
     }
+
+    .recipe__detail {
+        margin: 0 10px;
+    }
     
     .recipe__summary {
         margin: 0 260px;
@@ -368,8 +376,13 @@ form label, .textoContato {
         grid-column: span 2;
     }
 
+    .recipe__image {
+        width: 180px;
+    }
+
     .destail__recipe {
         grid-column: span 2;
+        margin: 0 50px;
     }
 
     .inputStandard {
@@ -444,8 +457,12 @@ form label, .textoContato {
         width: 360px;
     }
 
+    .recipe__detail {
+        font-size: 16px;
+    }
+
     .recipe__summary {
-        margin: 0 180px;
+        margin: 0 100px;
         grid-row: 1;
         grid-column: span 2;
     }
@@ -519,6 +536,10 @@ form label, .textoContato {
 
     .button__check {
         width: 260px;
+    }
+
+    .recipe__detail {
+        font-size: 12px;
     }
 
     .recipe__summary {
@@ -601,6 +622,10 @@ form label, .textoContato {
     
     .reset {
         width: 90px;
+    }
+
+    .recipe__detail {
+        font-size: 8px;
     }
 
     .recipes__image {
