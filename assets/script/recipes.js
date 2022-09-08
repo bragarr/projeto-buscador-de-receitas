@@ -1,5 +1,4 @@
 const recipeFormn = document.querySelector(".recipes__search");
-
 recipeFormn.addEventListener("submit", (event) => {
     event.preventDefault();
     const userInput = document.getElementById("input__search");
@@ -14,26 +13,33 @@ recipeFormn.addEventListener("submit", (event) => {
         .then(data => {
             const {meals} = data;
             console.log(data);
-            const itemList = document.querySelectorAll(".result__meal");
-            itemList.forEach(item => {
-                recipesList.removeChild(item);
-            })
-            for(let i = 0; i < meals.length; i++) {
-                const li = document.createElement("li");
-                li.classList.add("result__meal");
-                const containerResultSearch = `
-                <figure class="container__meal">
-                    <img src="${meals[i].strMealThumb}" alt="Meal Thumnail" class="recipes__image">
-                    <h3 class="name__recipes">${meals[i].strMeal}</h3>
-                </figure>
-                <figure class="container__country">
-                    <img src="./assets/img/${meals[i].strArea}.png" alt="Recipe Country" class="flag__image">
-                    <h2 class="name__flag">${meals[i].strArea}</h2>
-                </figure>
-                <button class="button__check" value=${i}>OPEN</button>
-                `;
-                li.innerHTML = containerResultSearch;
-                recipesList.appendChild(li);
+            if(meals === null) {
+                document.getElementById("error__message").textContent = "Sorry, We do not have this on our database. Please, Try another!" 
+            } else if( document.getElementById("input__search").value === "" ) {
+                document.getElementById("error__message").textContent = "Sorry, You need to type something first! Like: 'chichen' or 'Beef', evetually we will get there haha !" 
+            } else {
+                document.getElementById("error__message").textContent = ""
+                const itemList = document.querySelectorAll(".result__meal");
+                itemList.forEach(item => {
+                    recipesList.removeChild(item);
+                })
+                for(let i = 0; i < meals.length; i++) {
+                    const li = document.createElement("li");
+                    li.classList.add("result__meal");
+                    const containerResultSearch = `
+                    <figure class="container__meal">
+                        <img src="${meals[i].strMealThumb}" alt="Meal Thumnail" class="recipes__image">
+                        <h3 class="name__recipes">${meals[i].strMeal}</h3>
+                    </figure>
+                    <figure class="container__country">
+                        <img src="./assets/img/${meals[i].strArea}.png" alt="Recipe Country" class="flag__image">
+                        <h2 class="name__flag">${meals[i].strArea}</h2>
+                    </figure>
+                    <button class="button__check" value=${i}>OPEN</button>
+                    `;
+                    li.innerHTML = containerResultSearch;
+                    recipesList.appendChild(li);
+                }
             }
             userInput.value = "";
             const buttons = document.querySelectorAll(".button__check");
@@ -86,3 +92,4 @@ recipeFormn.addEventListener("submit", (event) => {
             })
         })
 })
+

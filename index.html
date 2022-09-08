@@ -28,12 +28,15 @@
                 <p>After having this in mind. Please, Enjoy it!</p>
                 <p>All data used on this project came from API <a href="https://www.themealdb.com/api.php" target="_blank" rel="noopener noreferrer">Free Meal App</a></p>
             </section>
+            <span id="error__message" class="error__message"></span>
             <section class="app__field">
                 <form class="recipes__search">
                     <input type="text" id="input__search" class="input__container" placeholder="Type here what you want to search Ex:'Chicken, Meat, Beef...'">
-                    <button class="button__search">Search now</button>
+                    <div class="buttons">
+                        <button class="button__search" id="button__search">Search now</button>
+                        <a href="./index.html" class="reset">Reset</a>
+                    </div>
                 </form>
-                <span class="message__alert" id="message"></span>
             </section>
             <section class="result__search">
                 <ul class="result__list" id="result__list">

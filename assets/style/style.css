@@ -4,6 +4,7 @@
     --button-check: #530303;
     --project-background: #b6a27b;
     --link-active: purple;
+    --red-alert: #ff0000;
 }
 
 body {
@@ -52,12 +53,18 @@ body {
     text-align: center;
 }
 
+.error__message{
+    display: block;
+    text-align: center;
+    color: var(--red-alert);
+    font-weight: 700;
+}
+
 .app__field {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
 }
 
 .input__container {
@@ -67,14 +74,35 @@ body {
     border-bottom: 2px solid var(--background-color);
 }
 
+.buttons {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .button__search {
-    width: 250px;
+    width: 125px;
     padding: 10px 0;
     cursor: pointer;
     background-color: var(--background-color);
     border: none;
     border-radius: 5px;
     color: var(--white-standard);
+}
+
+.reset {
+    display: inline-block;
+    width: 125px;
+    padding: 10px 0;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--white-standard);
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--red-alert);
+    font-size: 14px;
 }
 
 .result__search {
@@ -285,7 +313,7 @@ form label, .textoContato {
     
     .send {
         width: 40%;
-
+    }
     
 }
 
@@ -456,6 +484,19 @@ form label, .textoContato {
         font-size: 15px;
     }
 
+    .input__container::placeholder {
+        font-size: 10px;
+    }
+
+    .project__presantation {
+        font-size: 12px;
+    }   
+    
+    .error__message{
+        font-size: 12px;
+        margin: 0 4px;
+    }
+
     .recipes__search{
         display: flex;
         flex-direction: column;
@@ -528,6 +569,19 @@ form label, .textoContato {
         font-size: 8px;
     }
 
+    .input__container::placeholder {
+        font-size: 8px;
+    }
+
+    .project__presantation {
+        font-size: 8px;
+    }   
+    
+    .error__message{
+        margin: 0 2px;
+        font-size: 8px;
+    }
+
     .recipes__search{
         display: flex;
         flex-direction: column;
@@ -542,7 +596,11 @@ form label, .textoContato {
     
 
     .button__search {
-        width: 180px;
+        width: 90px;
+    }
+    
+    .reset {
+        width: 90px;
     }
 
     .recipes__image {
@@ -574,5 +632,4 @@ form label, .textoContato {
         grid-column: span 2;
         margin: 40px 30px;
     }
-
 }
